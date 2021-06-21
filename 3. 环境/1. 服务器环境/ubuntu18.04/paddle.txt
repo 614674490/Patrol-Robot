@@ -1,0 +1,3 @@
+paddleDection  --  包含YOLOV3的模型库
+paddle Slim  -- 压缩模型体积(内存大小)
+paddle Lite  --  提升运算能力

@@ -1,0 +1,9 @@
+python tools/infer.py -c configs/ppyolo/ppyolo.yml -o use_gpu=false weights=https://paddlemodels.bj.bcebos.com/object_detection/ppyolo.pdparams --infer_img=demo/000000014439.jpg
+
+python tools/train.py -c configs/yolov3_mobilenet_v1_roadsign.yml --eval -o use_gpu=false
+
+WARNING: AVX is not support on your machine. Hence, no_avx core will be imported, It has much worse preformance than avx core.
+
+W0210 21:00:06.968106  2475 sampler.cpp:139] bvar is busy at sampling for 2 seconds!
+
+work/PaddleDetection/output/yolov3_mobilenet_v1_roadsign_voc_template

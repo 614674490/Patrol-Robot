@@ -1,0 +1,39 @@
+sudo apt install python3.8-venv
+python3.8 -m venv my-env
+source my_env/bin/activate
+deactivate
+rm -rf my-env
+
+mkdir $HOME/.virtualenvs
+vim ~/.bashrc
+export WORKON_HOME=$HOME/.virtualenvs
+export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
+export VIRTUALENVWRAPPER_VIRTUALENV=~/.local/bin/virtualenv
+source ~/.local/bin/virtualenvwrapper.sh
+
+source ~/.bashrc
+workon virtualenv_name
+mkvirtualenvs
+rmvirtualenvs
+mvvirtualenvs
+lsvirtualenvs
+
+
+
+pip3 install -i https://pypi.tuna.tsinghua.edu.cn/simple 包名
+
+
+mkdir ~/.pip
+vim .pip/pip.conf
+[global]
+index-url = https://pypi.tuna.tsinghua.edu.cn/simple
+trusted-host = pypi.tuna.tsinghua.edu.cn
+
+python3 -c "import platform;print(platform.architecture()[0]);print(platform.machine())"
+if cat /proc/cpuinfo | grep -i avx; then echo Yes; else echo No; fi   (是否支持AVX指令集)
+python3 -m pip --version
+python3 -m pip install paddlepaddle -i https://mirror.baidu.com/pypi/simple
+python3
+import paddle
+paddle.utils.run_check()     PaddlePaddle is installed successfully!
+python3 -m pip uninstall paddlepaddle
